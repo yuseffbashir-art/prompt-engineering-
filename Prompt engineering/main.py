@@ -17,8 +17,8 @@ Answer: Yes, apple is a fruit.
 Now you try:
 Category: {category}
 Item: {item}
-Answer:"*"
-    print("\n --- ONE-SHOT LEARNING
+Answer:"""
+    print("\n --- ONE-SHOT LEARNING---")
     print(f"Response: {generate_response(one_shot, temperature=0.3, max_tokens=1024)}")
 few_shot = f"""Example 1:
 Category: fruit
@@ -28,7 +28,7 @@ Answer: Yes, apple is a fruit.
 Now you try:
 Category: {category}
 Item: {item}
-Answer: """
+Answer: 
     print("\n --- FEW-SHOT LEARNING --- ")
     print(f"Response: {generate_response(few_shot, temperature=0.3, max_tokens=1024)}")
     creative_prompt = f"""Write a one-sentence story about the given word.
@@ -36,7 +36,7 @@ Example 1: Word: moon
 Story: The moon winked at the lovers as they shared their first kiss.
 
 Word: {item}
-Story:"""
+Story:
     print("\n --- CREATIVE FEW-SHOT EXAMPLE --- ")
     print(f"Response: {generate_response(creative_prompt, temperature=0.7, max_tokens=1024)}")
     print("\n --- REFLECTION QUESTIONS --- ")

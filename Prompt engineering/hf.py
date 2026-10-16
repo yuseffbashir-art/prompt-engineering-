@@ -15,6 +15,11 @@ MODELS = getattr(
 config,
 "HF_MODELS",
 ["meta-llama/Llama-3.1-8B-Instruct"],
+["meta-llama/Llama-3-8B-Instruct"],
+["Qwen/Qwen2.5-7B-Instruct"],
+["openai/gpt-oss-120b"],
+["deepseek-ai/DeepSeek-V3"],
+["MiniMaxAI/MiniMax-M1-80k"]
 )
 def generate_response(prompt: str, temperature: float = 0.3, max_tokens: int = 512) -> str:
   key = getattr(config, "HF_API_KEY", None)
